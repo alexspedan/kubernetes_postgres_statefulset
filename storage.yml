@@ -10,7 +10,7 @@ spec:
   capacity:
     storage: 5Gi
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   hostPath:
     path: "/var/data"
 
@@ -26,7 +26,7 @@ spec:
   storageClassName: microk8s-hostpath
   capacity:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
