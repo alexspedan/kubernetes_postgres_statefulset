@@ -2,13 +2,13 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: PG
+  name: pg
   namespace: staging
 spec:
   selector:
     matchLabels:
       app: db
-  serviceName: "PG"
+  serviceName: "pg"
   replicas: 1
   template:
     metadata:
