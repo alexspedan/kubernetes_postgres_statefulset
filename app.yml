@@ -21,7 +21,7 @@ spec:
   selector:
     matchLabels:
       app: backendtest
-  replicas: 5
+  replicas: 2
   template:
     metadata:
       labels:
@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: backendtest
-        image: backendtest
+        image: docker.io/alexspedan/backendtest:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9000
@@ -73,7 +73,7 @@ spec:
   selector:
     matchLabels:
       app: frontendtest
-  replicas: 5
+  replicas: 2
   template:
     metadata:
       labels:
@@ -81,7 +81,7 @@ spec:
     spec:
       containers:
       - name: frontendtest
-        image: frontendtest
+        image: docker.io/alexspedan/frontendtest:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
